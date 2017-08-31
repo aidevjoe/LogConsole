@@ -7,6 +7,9 @@
 [![License](https://img.shields.io/cocoapods/l/LogConsole.svg?style=flat)](http://cocoapods.org/pods/LogConsole)
 [![Platform](https://img.shields.io/cocoapods/p/LogConsole.svg?style=flat)](http://cocoapods.org/pods/LogConsole)
 
+A handy log console tool that can output information to the console, file, and display a small console tool in App.When the tester has problems, you can view the logs directly on the iPhone without having to connect to the IDE.
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
