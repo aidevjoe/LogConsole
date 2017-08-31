@@ -1,4 +1,4 @@
-<img src="https://github.com/Joe0708/LogConsole/raw/master/Screenshot/SimulatorScreenShot.png" width="280">
+<img src="https://github.com/Joe0708/LogConsole/raw/master/Screenshot/SimulatorScreenShot.png" width="280" align=center>
 
 # LogConsole
 
@@ -11,7 +11,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-<img src="https://github.com/Joe0708/LogConsole/raw/master/Screenshot/Example.gif" width="280" text-align="center">
+<img src="https://github.com/Joe0708/LogConsole/raw/master/Screenshot/Example.gif" width="280" align=center>
 
 ## Requirements
 
@@ -59,7 +59,7 @@ You can specify the path and file name
 
 ```
     SKLog.saveLog(in: CustomPath, filename: CustomFilename)
-``
+```
 
 ## TODO
 
