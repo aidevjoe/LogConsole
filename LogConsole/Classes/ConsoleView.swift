@@ -1,8 +1,9 @@
 import UIKit
 
 private class SweetToolBar: UIToolbar {
-
+    
     var touchMove: ((CGFloat) -> ())?
+    var touchEnd: (() -> ())?
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touchEvent = touches.first!
@@ -11,15 +12,16 @@ private class SweetToolBar: UIToolbar {
         let dy = newDy - preDy
         touchMove?(dy)
     }
-}
-public extension UIImage {
-    static func make(name: String) -> UIImage? {
-        let bundle = Bundle(for: ConsoleView.self)
-        let path = bundle.path(forResource: "Resources", ofType: "bundle")
-        let resBundle = Bundle(path: path!)!
-        return UIImage(contentsOfFile: resBundle.path(forResource: name, ofType: "png")!)
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touchEnd?()
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touchEnd?()
     }
 }
+
 public class ConsoleView: UIView {
     
     //MARK: - Properties
@@ -29,24 +31,29 @@ public class ConsoleView: UIView {
     private struct Misc {
         static let ConsViewHeight: CGFloat = 300
         static let toolBarHeight: CGFloat = 44
-        static let bundle = Bundle(for: ConsoleView.self)
         
-        static let showImage = UIImage.make(name: "show_up")// UIImage(contentsOfFile: Misc.bundle.path(forResource: "show_up", ofType: ".png")!)// UIImage(named: "show_up")
-        static let hideImage = UIImage.make(name: "hide_down") //UIImage(contentsOfFile: Misc.bundle.path(forResource: "hide_down", ofType: ".png")!)//UIImage(named: "hide_down")
-        static let trashImage = UIImage.make(name: "trash") //UIImage(contentsOfFile: Misc.bundle.path(forResource: "trash", ofType: ".png")!)//UIImage(named: "trash")
+        static let showImage = UIImage.make(name: "up")!
+        static let hideImage = UIImage.make(name: "down")!
+        static let trashImage = UIImage.make(name: "trash")!
     }
     
     //MARK: - UI
     
     private lazy var hideBar: UIBarButtonItem = {
-        return UIBarButtonItem(image: Misc.hideImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(hideBarClickAction))
+        return UIBarButtonItem(customView: self.makeImageView(image: Misc.hideImage,
+                                                              target: self,
+                                                              selector: #selector(hideBarClickAction)))
     }()
     
     private lazy var toolBar: SweetToolBar = {
         let view = SweetToolBar()
         view.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: Misc.toolBarHeight)
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let trashBar = UIBarButtonItem(image: Misc.trashImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(clearOutputAction))
+        
+        let trashBar = UIBarButtonItem(customView: self.makeImageView(image: Misc.trashImage,
+                                                                      target: self,
+                                                                      selector: #selector(clearOutputAction)))
+        
         view.items = [self.hideBar, flexibleSpace, trashBar]
         return view
     }()
@@ -87,8 +94,22 @@ public class ConsoleView: UIView {
             if self.frame.origin.y + vertical > UIScreen.main.bounds.height - Misc.toolBarHeight { return }
             self.frame.origin.y += vertical
             self.frame.size.height -= vertical
-            self.hideBar.image = self.frame.size.height <= Misc.toolBarHeight ? Misc.showImage : Misc.hideImage
+            let image = self.frame.size.height <= Misc.toolBarHeight ? Misc.showImage : Misc.hideImage
+            (self.hideBar.customView as? UIImageView)?.image = image
             self.outputTextView.frame.size.height = self.frame.size.height - Misc.toolBarHeight
+        }
+        
+        toolBar.touchEnd = { [weak self] in
+            guard let `self` = self,
+                self.frame.size.height < 130 else { return }
+            
+            let hideY = UIScreen.main.bounds.height - self.toolBar.bounds.height
+            UIView.animate(withDuration: 0.25, animations: {
+                self.frame.origin.y = hideY
+                self.frame.size.height = Misc.toolBarHeight
+            })
+            (self.hideBar.customView as? UIImageView)?.image = Misc.showImage
+            
         }
         
         SKLog.didAddLog = { [weak self] in
@@ -107,7 +128,8 @@ public class ConsoleView: UIView {
         UIView.animate(withDuration: 0.25) {
             let hideY = UIScreen.main.bounds.height - self.toolBar.bounds.height
             self.frame.origin.y = self.frame.origin.y == hideY ? UIScreen.main.bounds.height - Misc.ConsViewHeight : hideY
-            self.hideBar.image = self.frame.origin.y == hideY ? Misc.showImage : Misc.hideImage
+            let image = self.frame.origin.y == hideY ? Misc.showImage : Misc.hideImage
+            (self.hideBar.customView as? UIImageView)?.image = image
             self.frame.size.height = self.frame.origin.y == hideY ? Misc.toolBarHeight : Misc.ConsViewHeight
             self.outputTextView.frame.size.height = self.frame.size.height - Misc.toolBarHeight
         }
@@ -117,5 +139,13 @@ public class ConsoleView: UIView {
         guard outputTextView.frame.size.height <= outputTextView.sizeThatFits(outputTextView.frame.size).height else { return }
         let bottomOffsetY = self.outputTextView.contentSize.height - self.outputTextView.frame.size.height
         self.outputTextView.setContentOffset(CGPoint(x: 0, y: bottomOffsetY), animated: true)
+    }
+    
+    func makeImageView(image: UIImage, target: Any, selector: Selector) -> UIImageView {
+        let imageView = UIImageView(image: image)
+        imageView.frame.size = CGSize(width: 30, height: 30)
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: target, action: selector))
+        return imageView
     }
 }

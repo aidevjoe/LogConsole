@@ -84,15 +84,22 @@ extension Date {
         let second = components.second ?? 0
         let nanoseconds = components.second ?? 1
         
-            if usFormat {
-                description = String(format: "%04li%@%02li%@%02li %02li:%02li:%02li", year, dateSeparator, month, dateSeparator, day, hour, minute, second)
-            } else {
-                description = String(format: "%02li%@%02li%@%04li %02li:%02li:%02li", month, dateSeparator, day, dateSeparator, year, hour, minute, second)
-            }
+        if usFormat {
+            description = String(format: "%04li%@%02li%@%02li %02li:%02li:%02li", year, dateSeparator, month, dateSeparator, day, hour, minute, second)
+        } else {
+            description = String(format: "%02li%@%02li%@%04li %02li:%02li:%02li", month, dateSeparator, day, dateSeparator, year, hour, minute, second)
+        }
         
         if nanosecond {
             description += String(format: ":%03li", nanoseconds / 1000000)
         }
         return description
+    }
+}
+
+extension UIImage {
+    static func make(name: String) -> UIImage? {
+        let bundle = Bundle(for: ConsoleView.self)
+        return UIImage(contentsOfFile: bundle.path(forResource: name, ofType: "png")!)
     }
 }

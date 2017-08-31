@@ -55,7 +55,6 @@
 		BF373F9C1F57DDC3005A9943 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		BF373F9D1F57DDC3005A9943 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
 		BF373F9E1F57DDC3005A9943 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
-		BF373FA01F57E1E0005A9943 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Resources.bundle; path = LogConsole/Assets/Resources.bundle; sourceTree = "<group>"; };
 		C07F3100EB7A96F37593053340DB313E /* Pods-LogConsole_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LogConsole_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C0C54A27935F6D497A4B091BF2E59F9B /* Pods-LogConsole_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LogConsole_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C24081889E1F9B4A986F9BA316D6F552 /* Pods-LogConsole_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LogConsole_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -174,7 +173,6 @@
 		802C6EB39695F49B04679FD7C692D826 /* LogConsole */ = {
 			isa = PBXGroup;
 			children = (
-				BF373FA01F57E1E0005A9943 /* Resources.bundle */,
 				BF373F941F57DDB8005A9943 /* ConsoleView.swift */,
 				BF373F951F57DDB8005A9943 /* Extensions.swift */,
 				BF373F961F57DDB8005A9943 /* SKLog.swift */,
