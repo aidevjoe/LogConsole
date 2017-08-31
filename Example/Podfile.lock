@@ -1,16 +1,12 @@
 PODS:
-  - LogConsole (0.1.0)
+  - LogConsole (0.0.2)
 
 DEPENDENCIES:
-  - LogConsole (from `../`)
-
-EXTERNAL SOURCES:
-  LogConsole:
-    :path: ../
+  - LogConsole
 
 SPEC CHECKSUMS:
-  LogConsole: 2fbd8b6c669bd9df4eb641a3131992aa510ab9d4
+  LogConsole: ad0e6645d8f52c8448216601b76344c8d87caf14
 
-PODFILE CHECKSUM: da720b3117bf3043e4dc3f969897ae1cf48deee3
+PODFILE CHECKSUM: 3b340672217f3b8c093f50ae5fbb7f9e91924058
 
 COCOAPODS: 1.3.1

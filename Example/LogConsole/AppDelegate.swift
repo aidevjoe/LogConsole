@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let consv = ConsoleView()
             self.window?.addSubview(consv)
         }
-        
         return true
     }
 

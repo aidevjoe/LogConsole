@@ -1,5 +1,3 @@
-<img src="https://github.com/Joe0708/LogConsole/raw/master/Screenshot/SimulatorScreenShot.png" width="280">
-
 # LogConsole
 
 [![CI Status](http://img.shields.io/travis/Joe/LogConsole.svg?style=flat)](https://travis-ci.org/Joe/LogConsole)
@@ -11,12 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-<img src="https://github.com/Joe0708/LogConsole/raw/master/Screenshot/Example.gif" width="280" text-align="center">
-
 ## Requirements
-
-- iOS 8.0
-- Swift Version 3.0
 
 ## Installation
 
@@ -26,45 +19,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "LogConsole"
 ```
-
-## Usage
-
-```
-import LogConsole
-```
-
-Add console view to Window（Optional）
-```
-    let consv = ConsoleView()
-    self.window?.addSubview(consv)
-```
-
-Print
-
-```
-    SKLog.info("Info")
-    SKLog.debug("Debug")
-    SKLog.warning("Warning")
-    SKLog.error("Error")
-
-```
-
-Write to file
-
-```
-    SKLog.saveLog()
-```
-
-You can specify the path and file name
-
-```
-    SKLog.saveLog(in: CustomPath, filename: CustomFilename)
-``
-
-## TODO
-
-1. Support horizontal screen
-2. Support Custom
 
 ## Author
 

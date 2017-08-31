@@ -1,11 +1,6 @@
 use_frameworks!
 
 target 'LogConsole_Example' do
-  pod 'LogConsole', :path => '../'
+  pod 'LogConsole'
 
-  target 'LogConsole_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
