@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dRS-9v-j6C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="uhJ-jw-uWa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dRS-9v-j6C" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rqv-gQ-9he">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PNy-aw-MVg" kind="relationship" relationship="rootViewController" id="9Te-jd-EeH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ig-kQ-EAd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103.2" y="690.40479760119945"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uo5-hD-pab">
+            <objects>
+                <viewController id="PNy-aw-MVg" customClass="ViewController" customModule="ConsoleView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gpU-Lt-ILC"/>
+                        <viewControllerLayoutGuide type="bottom" id="3xZ-My-uvb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="29j-f2-sM0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRV-ui-tFw">
+                                <rect key="frame" x="143" y="106" width="89" height="30"/>
+                                <state key="normal" title="Add Log"/>
+                                <connections>
+                                    <action selector="addLogAction" destination="PNy-aw-MVg" eventType="touchUpInside" id="I6u-YL-sna"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOB-Jw-3q6">
+                                <rect key="frame" x="152" y="180" width="70" height="30"/>
+                                <state key="normal" title="Print View"/>
+                                <connections>
+                                    <action selector="printViewAction" destination="PNy-aw-MVg" eventType="touchUpInside" id="SdD-Y1-81g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDX-Ts-VnL">
+                                <rect key="frame" x="146" y="261" width="84" height="30"/>
+                                <state key="normal" title="All Log Type"/>
+                                <connections>
+                                    <action selector="printAllLogType" destination="PNy-aw-MVg" eventType="touchUpInside" id="jJh-qi-ni2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gDX-Ts-VnL" secondAttribute="trailing" constant="129" id="IpX-Km-hAc"/>
+                            <constraint firstAttribute="trailing" secondItem="aRV-ui-tFw" secondAttribute="trailing" constant="143" id="TVe-x9-KHq"/>
+                            <constraint firstItem="gDX-Ts-VnL" firstAttribute="leading" secondItem="29j-f2-sM0" secondAttribute="leadingMargin" constant="130" id="VBu-cA-FKz"/>
+                            <constraint firstItem="JOB-Jw-3q6" firstAttribute="leading" secondItem="29j-f2-sM0" secondAttribute="leadingMargin" constant="136" id="X4I-8A-K3a"/>
+                            <constraint firstItem="gDX-Ts-VnL" firstAttribute="top" secondItem="JOB-Jw-3q6" secondAttribute="bottom" constant="51" id="XM2-Wt-dno"/>
+                            <constraint firstItem="JOB-Jw-3q6" firstAttribute="top" secondItem="aRV-ui-tFw" secondAttribute="bottom" constant="44" id="m3c-XB-AiE"/>
+                            <constraint firstItem="aRV-ui-tFw" firstAttribute="leading" secondItem="29j-f2-sM0" secondAttribute="leading" constant="143" id="p4h-eF-1Km"/>
+                            <constraint firstItem="aRV-ui-tFw" firstAttribute="top" secondItem="gpU-Lt-ILC" secondAttribute="bottom" constant="86" id="r5w-rk-wbg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JOB-Jw-3q6" secondAttribute="trailing" constant="137" id="tDC-wN-v3u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ti3-cc-hsO">
+                        <barButtonItem key="rightBarButtonItem" title="Push" id="rjZ-ku-y4O">
+                            <connections>
+                                <segue destination="PNy-aw-MVg" kind="show" id="YQ2-Cx-ugu">
+                                    <nil key="action"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lOP-w7-Z7s" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="690"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Te-jd-EeH"/>
+    </inferredMetricsTieBreakers>
+</document>

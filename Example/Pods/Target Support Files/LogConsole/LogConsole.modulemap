@@ -1,0 +1,6 @@
+framework module LogConsole {
+  umbrella header "LogConsole-umbrella.h"
+
+  export *
+  module * { export * }
+}

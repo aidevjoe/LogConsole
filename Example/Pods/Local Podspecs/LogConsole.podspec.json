@@ -1,0 +1,22 @@
+{
+  "name": "LogConsole",
+  "version": "0.1.0",
+  "summary": "A short description of LogConsole.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Joe/LogConsole",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Joe": "joesir7@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Joe/LogConsole.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LogConsole/Classes/**/*"
+}
