@@ -42,8 +42,9 @@ public class ConsoleView: UIView {
     private lazy var hideBtn: UIButton = {
         let btn = UIButton()
         btn.imageView?.contentMode = .center
-        btn.setImage(UIImage.make(name: "up"), for: .selected)
         btn.setImage(UIImage.make(name: "down"), for: .normal)
+        btn.setImage(UIImage.make(name: "up"), for: .selected)
+        btn.sizeToFit()
         btn.addTarget(self, action: #selector(hideBarClickAction), for: .touchUpInside)
         return btn
     }()
@@ -58,6 +59,7 @@ public class ConsoleView: UIView {
         btn.imageView?.contentMode = .center
         btn.setImage(UIImage.make(name: "trash"), for: .normal)
         btn.addTarget(self, action: #selector(clearOutputAction), for: .touchUpInside)
+        btn.sizeToFit()
         let trashBar = UIBarButtonItem(customView: btn)
         
         let hideBar = UIBarButtonItem(customView: self.hideBtn)
@@ -76,6 +78,8 @@ public class ConsoleView: UIView {
         view.textColor = .black
         view.backgroundColor = .clear
         view.isEditable = false
+        view.indicatorStyle = .white
+        view.showsHorizontalScrollIndicator = true
         return view
     }()
     

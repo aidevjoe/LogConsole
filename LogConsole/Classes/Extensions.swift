@@ -100,6 +100,7 @@ extension Date {
 extension UIImage {
     static func make(name: String) -> UIImage? {
         let bundle = Bundle(for: ConsoleView.self)
-        return UIImage(contentsOfFile: bundle.path(forResource: name, ofType: "png")!)
+        let path = bundle.resourcePath?.appendingPathComponent(name + ".png")
+        return UIImage(contentsOfFile: path!)
     }
 }
