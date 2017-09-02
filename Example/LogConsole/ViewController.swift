@@ -16,26 +16,26 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        SKLog.info("viewDidLoad")
+        Logger.info("viewDidLoad")
     }
     
     deinit {
-        SKLog.info("ViewController Deinit")
+        Logger.info("ViewController Deinit")
     }
     
     @IBAction func addLogAction() {
-        SKLog.info("Hello Console")
+        Logger.info("Hello Console")
     }
     
     @IBAction func printViewAction() {
-        SKLog.debug(self.view)
+        Logger.debug(self.view)
     }
     
     @IBAction func printAllLogType() {
-        SKLog.info("Info")
-        SKLog.debug("Debug")
-        SKLog.warning("Warning")
-        SKLog.error("Error")
+        Logger.info("Info")
+        Logger.debug("Debug")
+        Logger.warning("Warning")
+        Logger.error("Error")
     }
 }
 

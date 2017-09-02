@@ -1,21 +1,17 @@
 import Foundation
 import UIKit
 
-// MARK: - Global functions
-
-public struct SKLog {
+public struct Logger {
     // MARK: - Variables
     
     /// Enabled or not
     public static var isEnabled: Bool = true
-    
     /// The log AttributedString.
     public static var logAttrString = NSMutableAttributedString()
     /// The detailed log string.
     public static var detailedLog: String = ""
-    // Did Add Log
+    /// Did Add Log
     public static var didAddLog: (() -> ())?
-    
     
     private enum LogType {
         case warning, error, debug, info
@@ -31,10 +27,10 @@ public struct SKLog {
         
         var color: UIColor {
             switch self {
-            case .error: return .red
-            case .warning: return .yellow
+            case .error: return #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+            case .warning: return #colorLiteral(red: 0.9994240403, green: 0.9855536819, blue: 0, alpha: 1)
             case .info: return #colorLiteral(red: 0.2291581631, green: 0.6805399656, blue: 0.9839330316, alpha: 1)
-            case .debug: return .green
+            case .debug: return #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
             }
         }
     }
@@ -86,9 +82,10 @@ public struct SKLog {
     
     private static func handleLog(_ message: String, type: LogType) -> NSAttributedString {
         let aStr = NSMutableAttributedString(string: message)
+
         let paragraphStyle = NSMutableParagraphStyle()
-        
         paragraphStyle.lineSpacing = 5
+        
         aStr.addAttributes([NSParagraphStyleAttributeName: paragraphStyle,
                             NSForegroundColorAttributeName: type.color],
                            range: NSMakeRange(0, message.characters.count))
@@ -114,10 +111,10 @@ public struct SKLog {
         if FileManager.default.fileExists(atPath: fullPath) {
             logs = try! String(contentsOfFile: fullPath, encoding: .utf8)
             logs = logs + detailedLog
-            _ = FileManager.save(content: logs, savePath: path.appendingPathComponent(filename))
+            FileManager.save(content: logs, savePath: path.appendingPathComponent(filename))
             return
         }
         FileManager.create(at: fullPath)
-        _ = FileManager.save(content: logs, savePath: fullPath)
+        FileManager.save(content: logs, savePath: fullPath)
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-private class SweetToolBar: UIToolbar {
+private class MoveToolBar: UIToolbar {
     
     var touchMove: ((CGFloat) -> ())?
     var touchEnd: (() -> ())?
@@ -27,34 +27,42 @@ public class ConsoleView: UIView {
     //MARK: - Properties
     public static let shared = ConsoleView()
     
+    // Minimum height 130
+    public var height: CGFloat = Misc.ConsViewHeight
+    
     //Mark: - Struct
     private struct Misc {
         static let ConsViewHeight: CGFloat = 300
-        static let toolBarHeight: CGFloat = 44
-        
-        static let showImage = UIImage.make(name: "up")!
-        static let hideImage = UIImage.make(name: "down")!
-        static let trashImage = UIImage.make(name: "trash")!
+        static let toolBarHeight: CGFloat = 40
+        static let minHeight: CGFloat = 130
     }
     
     //MARK: - UI
     
-    private lazy var hideBar: UIBarButtonItem = {
-        return UIBarButtonItem(customView: self.makeImageView(image: Misc.hideImage,
-                                                              target: self,
-                                                              selector: #selector(hideBarClickAction)))
+    private lazy var hideBtn: UIButton = {
+        let btn = UIButton()
+        btn.imageView?.contentMode = .center
+        btn.setImage(UIImage.make(name: "up"), for: .selected)
+        btn.setImage(UIImage.make(name: "down"), for: .normal)
+        btn.addTarget(self, action: #selector(hideBarClickAction), for: .touchUpInside)
+        return btn
     }()
     
-    private lazy var toolBar: SweetToolBar = {
-        let view = SweetToolBar()
+    private lazy var toolBar: MoveToolBar = {
+        let view = MoveToolBar()
         view.frame = CGRect(x: 0, y: 0, width: self.bounds.width, height: Misc.toolBarHeight)
+        
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         
-        let trashBar = UIBarButtonItem(customView: self.makeImageView(image: Misc.trashImage,
-                                                                      target: self,
-                                                                      selector: #selector(clearOutputAction)))
+        let btn = UIButton()
+        btn.imageView?.contentMode = .center
+        btn.setImage(UIImage.make(name: "trash"), for: .normal)
+        btn.addTarget(self, action: #selector(clearOutputAction), for: .touchUpInside)
+        let trashBar = UIBarButtonItem(customView: btn)
         
-        view.items = [self.hideBar, flexibleSpace, trashBar]
+        let hideBar = UIBarButtonItem(customView: self.hideBtn)
+        
+        view.items = [hideBar, flexibleSpace, trashBar]
         return view
     }()
     
@@ -72,8 +80,12 @@ public class ConsoleView: UIView {
     }()
     
     //MARK: - Super Methods
-    public init() {
-        super.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.height - Misc.ConsViewHeight, width: UIScreen.main.bounds.width, height: Misc.ConsViewHeight))
+    public init(height: CGFloat = Misc.ConsViewHeight) {
+        self.height = height < Misc.minHeight ? Misc.minHeight : height
+        super.init(frame: CGRect(x: 0,
+                                 y: UIScreen.main.bounds.height - height,
+                                 width: UIScreen.main.bounds.width,
+                                 height: height))
         setup()
     }
     
@@ -89,48 +101,42 @@ public class ConsoleView: UIView {
         
         toolBar.touchMove = { [weak self] vertical in
             guard let `self` = self else { return }
-            
+
             if self.frame.origin.y + vertical < Misc.toolBarHeight { return }
             if self.frame.origin.y + vertical > UIScreen.main.bounds.height - Misc.toolBarHeight { return }
             self.frame.origin.y += vertical
             self.frame.size.height -= vertical
-            let image = self.frame.size.height <= Misc.toolBarHeight ? Misc.showImage : Misc.hideImage
-            (self.hideBar.customView as? UIImageView)?.image = image
+            self.hideBtn.isSelected = self.frame.size.height <= Misc.toolBarHeight
             self.outputTextView.frame.size.height = self.frame.size.height - Misc.toolBarHeight
         }
         
         toolBar.touchEnd = { [weak self] in
-            guard let `self` = self,
-                self.frame.size.height < 130 else { return }
-            
-            let hideY = UIScreen.main.bounds.height - self.toolBar.bounds.height
-            UIView.animate(withDuration: 0.25, animations: {
-                self.frame.origin.y = hideY
-                self.frame.size.height = Misc.toolBarHeight
-            })
-            (self.hideBar.customView as? UIImageView)?.image = Misc.showImage
-            
+            guard let `self` = self, self.frame.size.height < Misc.minHeight else { return }
+            self.toggle()
         }
         
-        SKLog.didAddLog = { [weak self] in
-            self?.outputTextView.attributedText = SKLog.logAttrString
+        Logger.didAddLog = { [weak self] in
+            self?.outputTextView.attributedText = Logger.logAttrString
             self?.scrollToBottom()
         }
     }
     
     //MARK: - Private Methods
     @objc private func clearOutputAction() {
-        SKLog.logAttrString = NSMutableAttributedString()
-        outputTextView.attributedText = SKLog.logAttrString
+        Logger.logAttrString = NSMutableAttributedString()
+        outputTextView.attributedText = Logger.logAttrString
     }
     
     @objc private func hideBarClickAction() {
+        self.toggle()
+    }
+    
+    func toggle() {
         UIView.animate(withDuration: 0.25) {
             let hideY = UIScreen.main.bounds.height - self.toolBar.bounds.height
-            self.frame.origin.y = self.frame.origin.y == hideY ? UIScreen.main.bounds.height - Misc.ConsViewHeight : hideY
-            let image = self.frame.origin.y == hideY ? Misc.showImage : Misc.hideImage
-            (self.hideBar.customView as? UIImageView)?.image = image
-            self.frame.size.height = self.frame.origin.y == hideY ? Misc.toolBarHeight : Misc.ConsViewHeight
+            self.frame.origin.y = self.frame.origin.y == hideY ? UIScreen.main.bounds.height - self.height : hideY
+            self.frame.size.height = UIScreen.main.bounds.height - self.frame.origin.y
+            self.hideBtn.isSelected = self.frame.height == Misc.toolBarHeight
             self.outputTextView.frame.size.height = self.frame.size.height - Misc.toolBarHeight
         }
     }
@@ -139,13 +145,5 @@ public class ConsoleView: UIView {
         guard outputTextView.frame.size.height <= outputTextView.sizeThatFits(outputTextView.frame.size).height else { return }
         let bottomOffsetY = self.outputTextView.contentSize.height - self.outputTextView.frame.size.height
         self.outputTextView.setContentOffset(CGPoint(x: 0, y: bottomOffsetY), animated: true)
-    }
-    
-    func makeImageView(image: UIImage, target: Any, selector: Selector) -> UIImageView {
-        let imageView = UIImageView(image: image)
-        imageView.frame.size = CGSize(width: 30, height: 30)
-        imageView.isUserInteractionEnabled = true
-        imageView.addGestureRecognizer(UITapGestureRecognizer(target: target, action: selector))
-        return imageView
     }
 }

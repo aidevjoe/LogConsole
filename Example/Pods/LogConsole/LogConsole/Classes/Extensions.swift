@@ -35,7 +35,7 @@ extension FileManager {
         }
     }
     
-    public class func save(content: String, savePath: String) -> Error? {
+    @discardableResult public class func save(content: String, savePath: String) -> Error? {
         if FileManager.default.fileExists(atPath: savePath) {
             do {
                 try FileManager.default.removeItem(atPath: savePath)

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LogConsole'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A handy debugging log console tool.'
 
 # This description is used to generate tags and improve search results.
@@ -33,9 +33,5 @@ A handy log console tool that can output information to the console, file, and d
   s.source_files     = 'LogConsole/Classes/**/*'
 
   s.resources        = 'LogConsole/Assets/*.png'
-
-  s.resource_bundles = {
-    'LogConsole' => ['LogConsole/Assets/*.png']
-  }
 
 end

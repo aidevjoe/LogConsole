@@ -2,7 +2,6 @@
 
 # LogConsole
 
-[![CI Status](http://img.shields.io/travis/Joe/LogConsole.svg?style=flat)](https://travis-ci.org/Joe/LogConsole)
 [![Version](https://img.shields.io/cocoapods/v/LogConsole.svg?style=flat)](http://cocoapods.org/pods/LogConsole)
 [![License](https://img.shields.io/cocoapods/l/LogConsole.svg?style=flat)](http://cocoapods.org/pods/LogConsole)
 [![Platform](https://img.shields.io/cocoapods/p/LogConsole.svg?style=flat)](http://cocoapods.org/pods/LogConsole)
@@ -45,23 +44,23 @@ Add console view to Window（Optional）
 Print
 
 ```
-    SKLog.info("Info")
-    SKLog.debug("Debug")
-    SKLog.warning("Warning")
-    SKLog.error("Error")
+    Logger.info("Info")
+    Logger.debug("Debug")
+    Logger.warning("Warning")
+    Logger.error("Error")
 
 ```
 
 Write to file
 
 ```
-    SKLog.saveLog()
+    Logger.saveLog()
 ```
 
 You can specify the path and file name
 
 ```
-    SKLog.saveLog(in: CustomPath, filename: CustomFilename)
+    Logger.saveLog(in: CustomPath, filename: CustomFilename)
 ```
 
 ## TODO
