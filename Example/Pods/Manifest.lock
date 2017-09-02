@@ -1,11 +1,11 @@
 PODS:
-  - LogConsole (0.0.4)
+  - LogConsole (0.0.5)
 
 DEPENDENCIES:
   - LogConsole
 
 SPEC CHECKSUMS:
-  LogConsole: 0ffbb14a940bd5be3d6299fe13adca4f2f9af462
+  LogConsole: 05bd1a973e3ce1d6bbdebda61b260530fae5ec39
 
 PODFILE CHECKSUM: 3b340672217f3b8c093f50ae5fbb7f9e91924058
 
