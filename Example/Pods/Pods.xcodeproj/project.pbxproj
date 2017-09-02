@@ -7,85 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13FA9168DE2748E35CDF9F57232D0A48 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755A5CF20479FA37AED00B7F0FBDC682 /* Logger.swift */; };
-		1D0DC74905F7A3C551E948041E4AA49E /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = E79618DCC95BCC52E1A187318B37A21C /* trash.png */; };
-		523FA9CD8EA58AB426DA9736CAF1A361 /* LogConsole.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C6FB786B9CEEB5EF3E4191691C253999 /* LogConsole.bundle */; };
-		66642B67C456D5BD713F13B1A3910E28 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = E79618DCC95BCC52E1A187318B37A21C /* trash.png */; };
-		7197F8940E720212AE530B4CFA88FDF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		93736AB384DB0ACF56C9CE1015B2EA53 /* LogConsole-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39EA00A40FB7316C05B8C3D446EE1BB7 /* LogConsole-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CFCB97090A2C00D7799A5113256BCEB /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FEFC72CFE9E325D03EE74B237A9934 /* ConsoleView.swift */; };
+		496C0DA7B8F58CCA55770E4F229B4A34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		75A16156E94D2B2237BA33715014CF25 /* LogConsole-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2943792B8C201BA04BE9C698687BD2D8 /* LogConsole-dummy.m */; };
+		7724D5F31F5A5C2700D8FA0C /* up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7724D5F21F5A5BD700D8FA0C /* up@2x.png */; };
+		7724D5F41F5A5C2B00D8FA0C /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7724D5F01F5A5BD700D8FA0C /* down@2x.png */; };
+		7724D5F51F5A5C2B00D8FA0C /* trash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7724D5F11F5A5BD700D8FA0C /* trash@2x.png */; };
+		7724D5F91F5A5D7800D8FA0C /* down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7724D5F71F5A5D7000D8FA0C /* down@3x.png */; };
+		7724D5FA1F5A5D7800D8FA0C /* trash@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7724D5F81F5A5D7000D8FA0C /* trash@3x.png */; };
+		7724D5FB1F5A5D7800D8FA0C /* up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7724D5F61F5A5D7000D8FA0C /* up@3x.png */; };
+		94DCBE80115AFB1FCD76ACD3029CB480 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1637FFF42A8DC3C37F2F14C2150F274F /* Extensions.swift */; };
+		9CA800F68B87247D82EA0A0DA4DF2539 /* LogConsole-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2D97A3CF5E24E9735FCEB6BE3EA3C /* LogConsole-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4E4236F277B63F465B0C39DF6550DE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B134E8B063D73379C6C8A18A0829364F /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D26C9DD437A708230C791B057BC2C25 /* up.png */; };
 		B8EF71A1113919C6A98641BF4BED398B /* Pods-LogConsole_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EF92B9B194921949B53ADBDEA959AA /* Pods-LogConsole_Example-dummy.m */; };
-		B948381D12A76C25F3A0C45FD1586904 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F482FA1BF2432A2E00727A73BCA286E1 /* Extensions.swift */; };
+		BC29C44F878C9A3C3303117613C1AE95 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5000A8558CCA85482D92460391EE6DCB /* Logger.swift */; };
 		BDD1EFD4EF8D5EB620353305B1A6C65C /* Pods-LogConsole_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A04BD86D08D94576D5AB12992613F0B1 /* Pods-LogConsole_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C46AA9F1603B8EC9B6720B78B53E5B38 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E56CD8D61D1191E027789EA3216297 /* down.png */; };
-		E62D3AB266511639A96C9ADF884562F5 /* ConsoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A4B0C01FAF9C56F06D88ABCAA3B703 /* ConsoleView.swift */; };
-		F6B6DE49DABE5B95C52020AB52878463 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D26C9DD437A708230C791B057BC2C25 /* up.png */; };
-		F8B0EA9B415DB7C87F762C09DB7B2BF8 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E56CD8D61D1191E027789EA3216297 /* down.png */; };
-		FAE422071368ACCC572D2F75F19F0D67 /* LogConsole-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6424E7586827E10C6206332CB39449 /* LogConsole-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1C3DA5B177E56927A667008BA6AFAAFD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E31FFC8FB22E233C75FAB662D5AA6CB;
-			remoteInfo = "LogConsole-LogConsole";
-		};
 		7B44447402C0FCAD98E6BC4947F16C96 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EFB98CCD50D2C5AE30C777A808D6AA80;
+			remoteGlobalIDString = A9812442862B6B767FD1541F117236F1;
 			remoteInfo = LogConsole;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04FEFC72CFE9E325D03EE74B237A9934 /* ConsoleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConsoleView.swift; path = LogConsole/Classes/ConsoleView.swift; sourceTree = "<group>"; };
+		0F37C4ACB96B6D2EEAE704E3F330F511 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CD411F0AF47A819A95A463E9A90B89 /* LogConsole.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LogConsole.modulemap; sourceTree = "<group>"; };
 		15315D5F52AAEDEA4CC3744A33617C94 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16A4B0C01FAF9C56F06D88ABCAA3B703 /* ConsoleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConsoleView.swift; path = LogConsole/Classes/ConsoleView.swift; sourceTree = "<group>"; };
+		15A2D97A3CF5E24E9735FCEB6BE3EA3C /* LogConsole-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LogConsole-umbrella.h"; sourceTree = "<group>"; };
+		1637FFF42A8DC3C37F2F14C2150F274F /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = LogConsole/Classes/Extensions.swift; sourceTree = "<group>"; };
 		1705C786F5572E084EDA24B8764CF28E /* Pods-LogConsole_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LogConsole_Example-frameworks.sh"; sourceTree = "<group>"; };
-		17BFA0A112CCBBA0A38F8127FC3F201D /* LogConsole.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LogConsole.modulemap; sourceTree = "<group>"; };
+		1717D640D38B946322666B1E0147AC33 /* LogConsole-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LogConsole-prefix.pch"; sourceTree = "<group>"; };
 		208FF14907523B1F76E3E496796AE8C6 /* Pods-LogConsole_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogConsole_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2943792B8C201BA04BE9C698687BD2D8 /* LogConsole-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LogConsole-dummy.m"; sourceTree = "<group>"; };
 		33EF92B9B194921949B53ADBDEA959AA /* Pods-LogConsole_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LogConsole_Example-dummy.m"; sourceTree = "<group>"; };
-		39EA00A40FB7316C05B8C3D446EE1BB7 /* LogConsole-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LogConsole-umbrella.h"; sourceTree = "<group>"; };
-		3D26C9DD437A708230C791B057BC2C25 /* up.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = up.png; path = LogConsole/Assets/up.png; sourceTree = "<group>"; };
-		3D6424E7586827E10C6206332CB39449 /* LogConsole-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LogConsole-dummy.m"; sourceTree = "<group>"; };
 		4149793A78009F5C897B6E672F74D751 /* Pods-LogConsole_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LogConsole_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4742B71A8B555EEE67E18F2C928AE766 /* Pods-LogConsole_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LogConsole_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		4DCAF0F7E29C5DED9DB7B6BC32D70DAF /* ResourceBundle-LogConsole-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LogConsole-Info.plist"; sourceTree = "<group>"; };
-		5362C0B679C14324575EDE11654FE121 /* LogConsole.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LogConsole.xcconfig; sourceTree = "<group>"; };
-		60E56CD8D61D1191E027789EA3216297 /* down.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = down.png; path = LogConsole/Assets/down.png; sourceTree = "<group>"; };
+		5000A8558CCA85482D92460391EE6DCB /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = LogConsole/Classes/Logger.swift; sourceTree = "<group>"; };
+		57C51C3AFD4F768E71EDBE1E77E3E6D0 /* Pods_LogConsole_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogConsole_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		755A5CF20479FA37AED00B7F0FBDC682 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = LogConsole/Classes/Logger.swift; sourceTree = "<group>"; };
+		68D93ED27878B41B26F76799133058FC /* LogConsole.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LogConsole.xcconfig; sourceTree = "<group>"; };
+		7724D5F01F5A5BD700D8FA0C /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "down@2x.png"; path = "LogConsole/Assets/down@2x.png"; sourceTree = "<group>"; };
+		7724D5F11F5A5BD700D8FA0C /* trash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trash@2x.png"; path = "LogConsole/Assets/trash@2x.png"; sourceTree = "<group>"; };
+		7724D5F21F5A5BD700D8FA0C /* up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "up@2x.png"; path = "LogConsole/Assets/up@2x.png"; sourceTree = "<group>"; };
+		7724D5F61F5A5D7000D8FA0C /* up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "up@3x.png"; path = "LogConsole/Assets/up@3x.png"; sourceTree = "<group>"; };
+		7724D5F71F5A5D7000D8FA0C /* down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "down@3x.png"; path = "LogConsole/Assets/down@3x.png"; sourceTree = "<group>"; };
+		7724D5F81F5A5D7000D8FA0C /* trash@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "trash@3x.png"; path = "LogConsole/Assets/trash@3x.png"; sourceTree = "<group>"; };
 		82E78619A89B0F01BAE532CA91043A3A /* Pods-LogConsole_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LogConsole_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		86AA33EABC9D39FF2930F2BA56670F47 /* Pods_LogConsole_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogConsole_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858085C23F37A7C5B2B8D3F93BDB1487 /* LogConsole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogConsole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93AA755E487BCF89415CF9052080C62C /* LogConsole-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LogConsole-prefix.pch"; sourceTree = "<group>"; };
 		A04BD86D08D94576D5AB12992613F0B1 /* Pods-LogConsole_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LogConsole_Example-umbrella.h"; sourceTree = "<group>"; };
 		A25FD4677508A7659BD43690D3304861 /* Pods-LogConsole_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LogConsole_Example.modulemap"; sourceTree = "<group>"; };
 		B730DEB7DCDC93D6ABB6272AA443DEA7 /* Pods-LogConsole_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LogConsole_Example-resources.sh"; sourceTree = "<group>"; };
-		B85F21F1F071493D6A8BF7B3C9D83199 /* LogConsole.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogConsole.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C496FFB7AB60A885A20634E0B5813BD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6FB786B9CEEB5EF3E4191691C253999 /* LogConsole.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogConsole.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		E79618DCC95BCC52E1A187318B37A21C /* trash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = trash.png; path = LogConsole/Assets/trash.png; sourceTree = "<group>"; };
-		F482FA1BF2432A2E00727A73BCA286E1 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = LogConsole/Classes/Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1BCEAD71073D74C2F7F4D8F422B55002 /* Frameworks */ = {
+		B71B2C9BC6DA4874D5A86F151BF48B9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDB0DAD4AF194AD314655A741EC3ECC0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7197F8940E720212AE530B4CFA88FDF6 /* Foundation.framework in Frameworks */,
+				496C0DA7B8F58CCA55770E4F229B4A34 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,14 +94,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		0AC3361DC32671BE8A75D63272D9FB47 /* Products */ = {
+		0A7C4672D9311EA27F43FBE8EBA9B064 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C6FB786B9CEEB5EF3E4191691C253999 /* LogConsole.bundle */,
-				B85F21F1F071493D6A8BF7B3C9D83199 /* LogConsole.framework */,
-				86AA33EABC9D39FF2930F2BA56670F47 /* Pods_LogConsole_Example.framework */,
+				0F37C4ACB96B6D2EEAE704E3F330F511 /* Info.plist */,
+				11CD411F0AF47A819A95A463E9A90B89 /* LogConsole.modulemap */,
+				68D93ED27878B41B26F76799133058FC /* LogConsole.xcconfig */,
+				2943792B8C201BA04BE9C698687BD2D8 /* LogConsole-dummy.m */,
+				1717D640D38B946322666B1E0147AC33 /* LogConsole-prefix.pch */,
+				15A2D97A3CF5E24E9735FCEB6BE3EA3C /* LogConsole-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/LogConsole";
 			sourceTree = "<group>";
 		};
 		17948E2164BBC9F33FC267EE3D53F587 /* Pods-LogConsole_Example */ = {
@@ -136,34 +126,46 @@
 			path = "Target Support Files/Pods-LogConsole_Example";
 			sourceTree = "<group>";
 		};
-		21233B1237A0ED98A21E6A0A96AACBD6 /* LogConsole */ = {
-			isa = PBXGroup;
-			children = (
-				16A4B0C01FAF9C56F06D88ABCAA3B703 /* ConsoleView.swift */,
-				F482FA1BF2432A2E00727A73BCA286E1 /* Extensions.swift */,
-				755A5CF20479FA37AED00B7F0FBDC682 /* Logger.swift */,
-				7A9C619C027A4FFC8D766AAA16634C58 /* Resources */,
-				E9C73816DAA46E85B135D4D4F110EEA2 /* Support Files */,
-			);
-			path = LogConsole;
-			sourceTree = "<group>";
-		};
 		373E363D59A2F6D2107DEFF04E85B042 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				21233B1237A0ED98A21E6A0A96AACBD6 /* LogConsole */,
+				749D8A6059C1C57989F63052A31B84CA /* LogConsole */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7A9C619C027A4FFC8D766AAA16634C58 /* Resources */ = {
+		48BAC00EB0A9229FB2F4E944442E3FBB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				60E56CD8D61D1191E027789EA3216297 /* down.png */,
-				E79618DCC95BCC52E1A187318B37A21C /* trash.png */,
-				3D26C9DD437A708230C791B057BC2C25 /* up.png */,
+				7724D5F01F5A5BD700D8FA0C /* down@2x.png */,
+				7724D5F11F5A5BD700D8FA0C /* trash@2x.png */,
+				7724D5F21F5A5BD700D8FA0C /* up@2x.png */,
+				7724D5F71F5A5D7000D8FA0C /* down@3x.png */,
+				7724D5F81F5A5D7000D8FA0C /* trash@3x.png */,
+				7724D5F61F5A5D7000D8FA0C /* up@3x.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		5F382181A5C5B4DDEAD1C573BD685B6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				858085C23F37A7C5B2B8D3F93BDB1487 /* LogConsole.framework */,
+				57C51C3AFD4F768E71EDBE1E77E3E6D0 /* Pods_LogConsole_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		749D8A6059C1C57989F63052A31B84CA /* LogConsole */ = {
+			isa = PBXGroup;
+			children = (
+				04FEFC72CFE9E325D03EE74B237A9934 /* ConsoleView.swift */,
+				1637FFF42A8DC3C37F2F14C2150F274F /* Extensions.swift */,
+				5000A8558CCA85482D92460391EE6DCB /* Logger.swift */,
+				48BAC00EB0A9229FB2F4E944442E3FBB /* Resources */,
+				0A7C4672D9311EA27F43FBE8EBA9B064 /* Support Files */,
+			);
+			path = LogConsole;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -172,7 +174,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				373E363D59A2F6D2107DEFF04E85B042 /* Pods */,
-				0AC3361DC32671BE8A75D63272D9FB47 /* Products */,
+				5F382181A5C5B4DDEAD1C573BD685B6E /* Products */,
 				0858E2757A0061130101F7955402234E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -193,32 +195,9 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E9C73816DAA46E85B135D4D4F110EEA2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C496FFB7AB60A885A20634E0B5813BD3 /* Info.plist */,
-				17BFA0A112CCBBA0A38F8127FC3F201D /* LogConsole.modulemap */,
-				5362C0B679C14324575EDE11654FE121 /* LogConsole.xcconfig */,
-				3D6424E7586827E10C6206332CB39449 /* LogConsole-dummy.m */,
-				93AA755E487BCF89415CF9052080C62C /* LogConsole-prefix.pch */,
-				39EA00A40FB7316C05B8C3D446EE1BB7 /* LogConsole-umbrella.h */,
-				4DCAF0F7E29C5DED9DB7B6BC32D70DAF /* ResourceBundle-LogConsole-Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LogConsole";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		72EBA41AD0E2BDE4A7675F20DE1A5825 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				93736AB384DB0ACF56C9CE1015B2EA53 /* LogConsole-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9161B49163EF4D518612F6F492FF2A19 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,26 +206,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A56AD2EDC240C7F447582DDDE7562013 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CA800F68B87247D82EA0A0DA4DF2539 /* LogConsole-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4E31FFC8FB22E233C75FAB662D5AA6CB /* LogConsole-LogConsole */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A869A935FCF568B0AF90EC5F1437C1F7 /* Build configuration list for PBXNativeTarget "LogConsole-LogConsole" */;
-			buildPhases = (
-				53B8A2D280831BC20814A5406398B8E9 /* Sources */,
-				1BCEAD71073D74C2F7F4D8F422B55002 /* Frameworks */,
-				74F535E2C6E27EDFD5B6B2625840D1CB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "LogConsole-LogConsole";
-			productName = "LogConsole-LogConsole";
-			productReference = C6FB786B9CEEB5EF3E4191691C253999 /* LogConsole.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		58DE3998CBBD9B268875BDE5F327E818 /* Pods-LogConsole_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81158D01B8EEBCD741E50C069A00F2E9 /* Build configuration list for PBXNativeTarget "Pods-LogConsole_Example" */;
@@ -262,26 +232,25 @@
 			);
 			name = "Pods-LogConsole_Example";
 			productName = "Pods-LogConsole_Example";
-			productReference = 86AA33EABC9D39FF2930F2BA56670F47 /* Pods_LogConsole_Example.framework */;
+			productReference = 57C51C3AFD4F768E71EDBE1E77E3E6D0 /* Pods_LogConsole_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EFB98CCD50D2C5AE30C777A808D6AA80 /* LogConsole */ = {
+		A9812442862B6B767FD1541F117236F1 /* LogConsole */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40425DE51286F002CF7BF1D730128A26 /* Build configuration list for PBXNativeTarget "LogConsole" */;
+			buildConfigurationList = 7E60374A8CD17F886A4F3ED032E3858F /* Build configuration list for PBXNativeTarget "LogConsole" */;
 			buildPhases = (
-				72F1C73EDEFC44350958FA1B731BE10B /* Sources */,
-				DDB0DAD4AF194AD314655A741EC3ECC0 /* Frameworks */,
-				F71D39E049DABEEEED7950ACE9314501 /* Resources */,
-				72EBA41AD0E2BDE4A7675F20DE1A5825 /* Headers */,
+				661FF44DDD4E619FAF16DE6118F19DAC /* Sources */,
+				B71B2C9BC6DA4874D5A86F151BF48B9D /* Frameworks */,
+				0B740417A7A8B1BFE8E3B44E1D3FC007 /* Resources */,
+				A56AD2EDC240C7F447582DDDE7562013 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B4C884425CD143CB1B39520F381CF04C /* PBXTargetDependency */,
 			);
 			name = LogConsole;
 			productName = LogConsole;
-			productReference = B85F21F1F071493D6A8BF7B3C9D83199 /* LogConsole.framework */;
+			productReference = 858085C23F37A7C5B2B8D3F93BDB1487 /* LogConsole.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -301,49 +270,33 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 0AC3361DC32671BE8A75D63272D9FB47 /* Products */;
+			productRefGroup = 5F382181A5C5B4DDEAD1C573BD685B6E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EFB98CCD50D2C5AE30C777A808D6AA80 /* LogConsole */,
-				4E31FFC8FB22E233C75FAB662D5AA6CB /* LogConsole-LogConsole */,
+				A9812442862B6B767FD1541F117236F1 /* LogConsole */,
 				58DE3998CBBD9B268875BDE5F327E818 /* Pods-LogConsole_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		74F535E2C6E27EDFD5B6B2625840D1CB /* Resources */ = {
+		0B740417A7A8B1BFE8E3B44E1D3FC007 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46AA9F1603B8EC9B6720B78B53E5B38 /* down.png in Resources */,
-				66642B67C456D5BD713F13B1A3910E28 /* trash.png in Resources */,
-				F6B6DE49DABE5B95C52020AB52878463 /* up.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F71D39E049DABEEEED7950ACE9314501 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8B0EA9B415DB7C87F762C09DB7B2BF8 /* down.png in Resources */,
-				523FA9CD8EA58AB426DA9736CAF1A361 /* LogConsole.bundle in Resources */,
-				1D0DC74905F7A3C551E948041E4AA49E /* trash.png in Resources */,
-				B134E8B063D73379C6C8A18A0829364F /* up.png in Resources */,
+				7724D5F91F5A5D7800D8FA0C /* down@3x.png in Resources */,
+				7724D5FA1F5A5D7800D8FA0C /* trash@3x.png in Resources */,
+				7724D5FB1F5A5D7800D8FA0C /* up@3x.png in Resources */,
+				7724D5F41F5A5C2B00D8FA0C /* down@2x.png in Resources */,
+				7724D5F51F5A5C2B00D8FA0C /* trash@2x.png in Resources */,
+				7724D5F31F5A5C2700D8FA0C /* up@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		53B8A2D280831BC20814A5406398B8E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		55E3B5C12EB942ADA65076D464C1E975 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,122 +305,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72F1C73EDEFC44350958FA1B731BE10B /* Sources */ = {
+		661FF44DDD4E619FAF16DE6118F19DAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E62D3AB266511639A96C9ADF884562F5 /* ConsoleView.swift in Sources */,
-				B948381D12A76C25F3A0C45FD1586904 /* Extensions.swift in Sources */,
-				FAE422071368ACCC572D2F75F19F0D67 /* LogConsole-dummy.m in Sources */,
-				13FA9168DE2748E35CDF9F57232D0A48 /* Logger.swift in Sources */,
+				0CFCB97090A2C00D7799A5113256BCEB /* ConsoleView.swift in Sources */,
+				94DCBE80115AFB1FCD76ACD3029CB480 /* Extensions.swift in Sources */,
+				75A16156E94D2B2237BA33715014CF25 /* LogConsole-dummy.m in Sources */,
+				BC29C44F878C9A3C3303117613C1AE95 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B4C884425CD143CB1B39520F381CF04C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "LogConsole-LogConsole";
-			target = 4E31FFC8FB22E233C75FAB662D5AA6CB /* LogConsole-LogConsole */;
-			targetProxy = 1C3DA5B177E56927A667008BA6AFAAFD /* PBXContainerItemProxy */;
-		};
 		ED9366E9646891F8A270751A898C4D63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LogConsole;
-			target = EFB98CCD50D2C5AE30C777A808D6AA80 /* LogConsole */;
+			target = A9812442862B6B767FD1541F117236F1 /* LogConsole */;
 			targetProxy = 7B44447402C0FCAD98E6BC4947F16C96 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1FC0E957111D4F094ECFFED6144CA7D8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5362C0B679C14324575EDE11654FE121 /* LogConsole.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LogConsole";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/LogConsole/ResourceBundle-LogConsole-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = LogConsole;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		5C006E0328FE16B51D4AEFD1C74362EA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5362C0B679C14324575EDE11654FE121 /* LogConsole.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LogConsole/LogConsole-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LogConsole/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LogConsole/LogConsole.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LogConsole;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6369F1903B091A7CCF04C129732D5E00 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5362C0B679C14324575EDE11654FE121 /* LogConsole.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LogConsole/LogConsole-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LogConsole/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LogConsole/LogConsole.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LogConsole;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,6 +371,41 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		A2AC279C6AD7B4FBE22C85A902DCE635 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68D93ED27878B41B26F76799133058FC /* LogConsole.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LogConsole/LogConsole-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LogConsole/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LogConsole/LogConsole.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LogConsole;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		A5E0DB9DE119C082E72D14F3C52F26AE /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -638,20 +533,38 @@
 			};
 			name = Debug;
 		};
-		FA1184798C3A241398E0A1A2BCECDF07 /* Release */ = {
+		E38FAB7A32F8AD912D6EEC37DB344A2D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5362C0B679C14324575EDE11654FE121 /* LogConsole.xcconfig */;
+			baseConfigurationReference = 68D93ED27878B41B26F76799133058FC /* LogConsole.xcconfig */;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LogConsole";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/LogConsole/ResourceBundle-LogConsole-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/LogConsole/LogConsole-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LogConsole/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LogConsole/LogConsole.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = LogConsole;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -667,11 +580,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40425DE51286F002CF7BF1D730128A26 /* Build configuration list for PBXNativeTarget "LogConsole" */ = {
+		7E60374A8CD17F886A4F3ED032E3858F /* Build configuration list for PBXNativeTarget "LogConsole" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C006E0328FE16B51D4AEFD1C74362EA /* Debug */,
-				6369F1903B091A7CCF04C129732D5E00 /* Release */,
+				A2AC279C6AD7B4FBE22C85A902DCE635 /* Debug */,
+				E38FAB7A32F8AD912D6EEC37DB344A2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -681,15 +594,6 @@
 			buildConfigurations = (
 				CDB6E3D950982B64890A26A17CF8DEF0 /* Debug */,
 				A5E0DB9DE119C082E72D14F3C52F26AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A869A935FCF568B0AF90EC5F1437C1F7 /* Build configuration list for PBXNativeTarget "LogConsole-LogConsole" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1FC0E957111D4F094ECFFED6144CA7D8 /* Debug */,
-				FA1184798C3A241398E0A1A2BCECDF07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
