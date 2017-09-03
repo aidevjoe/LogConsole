@@ -53,7 +53,9 @@ public struct Logger {
         let dateString = DateFormatter.localizedString(from: Date(), dateStyle: .none, timeStyle: .short)
         let logString = dateString + " \(filenameWithoutExtension):\(line) " + _message
         logAttrString.append(handleLog(logString, type: type))
-        didAddLog?()
+        DispatchQueue.main.async {
+            didAddLog?()
+        }
         
         self.detailedLog += logMessage
     }
